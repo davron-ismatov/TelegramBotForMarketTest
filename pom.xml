@@ -5,8 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.5</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>3.2.2</version>
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>TelegramBotForMarketTest</artifactId>
@@ -17,13 +16,21 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.1</version> <!-- Or use a different version if preferred -->
 		</dependency>
 
 		<dependency>
@@ -31,6 +38,7 @@
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -39,7 +47,16 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<scope>annotationProcessor</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.telegram</groupId>
+			<artifactId>telegrambots-spring-boot-starter</artifactId>
+			<version>6.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vdurmont</groupId>
+			<artifactId>emoji-java</artifactId>
+			<version>5.1.1</version>
 		</dependency>
 	</dependencies>
 
