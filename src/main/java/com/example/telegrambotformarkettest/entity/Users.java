@@ -3,6 +3,8 @@ package com.example.telegrambotformarkettest.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "users_tbl")
 @Getter
@@ -21,4 +23,6 @@ public class Users {
     private Double latitude;
     private String language;
     private Boolean is_service_available;
+    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL)
+    List<Order> orderList;
 }

@@ -3,7 +3,10 @@ package com.example.telegrambotformarkettest.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity @Table(name = "product_tbl")
+import java.util.List;
+
+@Entity
+@Table(name = "product_tbl")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -26,4 +29,6 @@ public class Product {
     private Integer totalAmount;
 
     private Integer soldAmount;
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    List<OrderItem> orderItemList;
 }
