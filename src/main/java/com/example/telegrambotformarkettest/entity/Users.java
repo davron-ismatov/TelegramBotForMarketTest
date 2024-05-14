@@ -1,5 +1,6 @@
 package com.example.telegrambotformarkettest.entity;
 
+import com.example.telegrambotformarkettest.enums.UserState;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,4 +26,7 @@ public class Users {
     private Boolean is_service_available;
     @OneToMany(mappedBy = "users", cascade = CascadeType.ALL)
     List<Order> orderList;
+
+    @Enumerated(EnumType.STRING)
+    private UserState userState;
 }

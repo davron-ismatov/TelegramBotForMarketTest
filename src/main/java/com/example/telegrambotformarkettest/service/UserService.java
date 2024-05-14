@@ -2,6 +2,7 @@ package com.example.telegrambotformarkettest.service;
 
 import com.example.telegrambotformarkettest.entity.Users;
 import org.telegram.telegrambots.meta.api.objects.Location;
+import org.telegram.telegrambots.meta.api.objects.Message;
 
 import java.util.List;
 
@@ -11,8 +12,9 @@ public interface UserService {
 
     List<Users> getAllUsers();
 
-    Boolean saveUser(String text,String field);
-    Boolean saveUser(Location location,Boolean is_service_available);
+    Boolean saveUser(Message message, String field);
+    Boolean saveUser(Message message,Boolean is_service_available);
+    Boolean saveUser(Long chatId,String language);
 
     Boolean updateUser(Users users);
 
