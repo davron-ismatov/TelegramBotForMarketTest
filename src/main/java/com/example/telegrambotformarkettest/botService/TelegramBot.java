@@ -90,11 +90,11 @@ public class TelegramBot extends TelegramLongPollingBot{
         KeyboardRow row = new KeyboardRow();
         row.add("\uD83C\uDFF7 Product");
         KeyboardRow row1 = new KeyboardRow();
-        row.add("\uD83C\uDFF7️ Product");
+        row1.add("\uD83D\uDCDC️ History of sales");
         KeyboardRow row2 = new KeyboardRow();
-        row.add("\uD83C\uDFF7️ Product");
+        row2.add("\uD83D\uDED2️ Bucket");
         KeyboardRow row3 = new KeyboardRow();
-        row.add("\uD83C\uDFF7️ Product");
+        row3.add(EmojiParser.parseToUnicode(":gear:")+" Settings");
 
         list.add(row);
         list.add(row1);
