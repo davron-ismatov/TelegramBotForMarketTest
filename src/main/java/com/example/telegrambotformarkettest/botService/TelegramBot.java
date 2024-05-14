@@ -45,10 +45,7 @@ public class TelegramBot extends TelegramLongPollingBot{
     public String getBotToken() {
         return botToken;
     }
-//    private void TODO(){
-//        // todo: add UserState to database
-//        // todo: work with States while editing User's info
-//    }
+
 
     @Override
     public void onUpdateReceived(Update update) {
@@ -82,6 +79,7 @@ public class TelegramBot extends TelegramLongPollingBot{
                     userService.saveUser(message, serviceAvailable);
                     menu(messageUtils.generateMessage(update, "Service is unavailable in your location"));
                 }
+                userService.saveUser(message.getChatId(),message.getFrom().getLanguageCode());
             }
 
         }
